@@ -1,5 +1,5 @@
 /*
- * Compile with:    gcc -O3 oeis.c -lm -lz
+ * Compile with:    gcc -O3 oeis-lindep.c -lm -lz
  */
 
 /*
@@ -10,6 +10,17 @@
        related sequences which is unlikely to be very relevant).
      MAXNORM is the maximal value of the norm for the resulting
        vector in the PSLQ algorithm.
+
+     A set of several versions could be compiled with various settings
+     and various names (for the executable files), like:
+
+         gcc -o oeis-lindep43 -O3 oeis-lindep.c -lm -lz
+         gcc -o oeis-lindep44 -O3 oeis-lindep.c -lm -lz
+         gcc -o oeis-lindep53 -O3 oeis-lindep.c -lm -lz
+         gcc -o oeis-lindep54 -O3 oeis-lindep.c -lm -lz
+
+         (for settings (NBR,ATLEAST) being (4,3), (4,4), (5,3), (5,4) )
+
 */
 
 #define NBR 4
